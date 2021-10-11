@@ -534,6 +534,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8476dbb19c1870e4c9aa7449646c8378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAge: 35
+  playerName: Pere
+  gameOver: 0
+  sound: "\xA1Ni, no!"
 --- !u!4 &431328348
 Transform:
   m_ObjectHideFlags: 0
@@ -2295,6 +2299,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8476dbb19c1870e4c9aa7449646c8378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAge: 35
+  playerName: Pere
+  gameOver: 0
+  sound: "\xA1Brum, brum!"
 --- !u!4 &2079981058
 Transform:
   m_ObjectHideFlags: 0

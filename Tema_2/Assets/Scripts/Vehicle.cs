@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Vehicle : MonoBehaviour
 {
+    public int playerAge = 35;
+    private float playerSpeed = 5.25f;
+    public string playerName = "Pere";
+    [SerializeField] private bool gameOver;  
+
     // Start is called before the first frame update
     void Start()
     {
