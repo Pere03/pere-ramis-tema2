@@ -535,9 +535,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAge: 35
-  playerName: Pere
+  playerName: Paco
   gameOver: 0
-  sound: "\xA1Ni, no!"
+  sound: "\xA1Ni, No!"
+  Name: Ambulancia
+  numberWheels: 4
+  hasSiren: 1
 --- !u!4 &431328348
 Transform:
   m_ObjectHideFlags: 0
@@ -2303,6 +2306,9 @@ MonoBehaviour:
   playerName: Pere
   gameOver: 0
   sound: "\xA1Brum, brum!"
+  Name: Coche
+  numberWheels: 4
+  hasSiren: 0
 --- !u!4 &2079981058
 Transform:
   m_ObjectHideFlags: 0

@@ -7,13 +7,47 @@ public class Vehicle : MonoBehaviour
     public int playerAge = 35;
     private float playerSpeed = 5.25f;
     public string playerName = "Pere";
-    [SerializeField] private bool gameOver;  
+    [SerializeField] private bool gameOver;
+    [SerializeField] private string sound = "¡Brum, brum!";
+
+    [SerializeField] private string Name = "";
+    [SerializeField] private int numberWheels = 4;
+    //La variable Name no contiene ningun valor, y la variable numberWheels contiene valor 4
+
+    [SerializeField] private bool hasSiren;
+    // La variable hasSiren es una variable boleana, asi que por defecto no tiene nada asignado, osea que esta en false.
+
+    [SerializeField] private bool isOn;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        /*
+        Debug.Log($"{Name} tiene {numberWheels} ruedas y hace {sound}");
+        //Mensaje coche y ambulancia
+
+        if (hasSiren)
+        {
+            Debug.Log($"{Name} tiene sirena");
+        }
+        else
+        {
+            Debug.Log($"{Name} no tiene sirena");
+        }
+
     }
+    //Mensaje sirena
+   */
+    if (isOn == true)
+       {
+         Debug.Log("sound");
+       } else if (hasSiren == true) {
+         Debug.Log($"{Name} hara {sound} cuando se ponga en marcha.");
+       } else {
+         Debug.Log($"{Name} no esta en marcha.");
+    }
+}
+
 
     // Update is called once per frame
     void Update()

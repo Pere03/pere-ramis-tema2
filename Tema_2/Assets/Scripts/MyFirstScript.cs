@@ -4,29 +4,56 @@ using UnityEngine;
 
 public class MyFirstScript : MonoBehaviour
 {
-   
-   /*
-   public int playerAge = 35;
-   private float playerSpeed = 5.25f;
-   public string playerName = "Pere";
-   [SerializeField] private bool gameOver; 
-   */
 
+    /*
+    private float playerSpeed = 5.25f;
+    public string playerName = "Pere";
+    [SerializeField] private bool gameOver; 
+    */
 
+    /*
     public int x = 5;
     public int y = 2;
 
     public float a = 5f;
     public float b = 2f;
+     */
+    public bool isRaining = false;
+
+    public int playerAge = 35;
 
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   /*
         Debug.Log($"Suma: {x} + {y} = {x + y}");
         Debug.Log("Resta: " + x + "+" + y + "=" + (x - y));
-        Debug.Log($"Multiplicacion: {x} * {y} = {x * y}");
-        Debug.Log("Division: " + x + "/" + y + "=" + (x / y));
+        Debug.Log(string.Format("Producto: {0} * {1} = {2}", x, y, x * y));
+        Debug.Log(string.Format("Division: {0} / {1} = {2}", x, y, x / y));
+        */
+
+        if (isRaining)
+        {
+            Debug.Log("Lleva paraguas.");
+        } else {
+            Debug.Log($"No hace falta paraguas.");
+        }
+
+
+        if (playerAge >= 18) 
+        {
+            Debug.Log("Eres mayor de edad");
+        } else if (playerAge >= 13) 
+        {
+            Debug.Log("Eres adolescente");
+             } else if (playerAge >= 4)
+             {
+                  Debug.Log("Eres un niño");
+                  }else
+              {
+                    Debug.Log("Eres un bebe");
+              }
+           
 
     }
 
