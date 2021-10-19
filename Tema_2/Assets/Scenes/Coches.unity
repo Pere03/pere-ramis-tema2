@@ -541,6 +541,8 @@ MonoBehaviour:
   Name: Ambulancia
   numberWheels: 4
   hasSiren: 1
+  isOn: 1
+  Gasolina: 49.75
 --- !u!4 &431328348
 Transform:
   m_ObjectHideFlags: 0
@@ -2308,7 +2310,9 @@ MonoBehaviour:
   sound: "\xA1Brum, brum!"
   Name: Coche
   numberWheels: 4
-  hasSiren: 0
+  hasSiren: 1
+  isOn: 1
+  Gasolina: 7.25
 --- !u!4 &2079981058
 Transform:
   m_ObjectHideFlags: 0

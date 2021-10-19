@@ -19,6 +19,8 @@ public class Vehicle : MonoBehaviour
 
     [SerializeField] private bool isOn;
 
+    [SerializeField] private float Gasolina = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,16 +40,38 @@ public class Vehicle : MonoBehaviour
     }
     //Mensaje sirena
    */
-    if (isOn == true)
-       {
-         Debug.Log("sound");
-       } else if (hasSiren == true) {
-         Debug.Log($"{Name} hara {sound} cuando se ponga en marcha.");
-       } else {
-         Debug.Log($"{Name} no esta en marcha.");
-    }
-}
+        if (isOn == true)
+        {
+            Debug.Log("sound");
+        } else if (hasSiren == true) {
+            Debug.Log($"{Name} hara {sound} cuando se ponga en marcha.");
+        } else {
+            Debug.Log($"{Name} no esta en marcha.");
+        }
+        //Indica un mensaje dependiendo de si esta encendido o no.
 
+
+        if (Gasolina < 10 && isOn == true)
+        {
+            Debug.Log($"¡A {Name} le queda poca gasolina!");
+        }
+        else if (hasSiren == true)
+        {
+            Debug.Log($"{sound}");
+            } 
+            else if (hasSiren == false)
+            {
+                Debug.Log($"{Name} no tiene sirena");
+                } 
+                else if (isOn == false)
+                {
+                Debug.Log($"{Name} no esta en marcha");
+                }
+
+            
+
+
+    }
 
     // Update is called once per frame
     void Update()

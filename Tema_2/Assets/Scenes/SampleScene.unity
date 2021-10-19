@@ -155,11 +155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa9d17b049eb0294697141046caab087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRaining: 1
+  isCold: 1
+  playerAge: 35
   x: 5
-  y: 2
-  a: 5
-  b: 2
-  isRaining: 0
+  y: 4
 --- !u!65 &70887125
 BoxCollider:
   m_ObjectHideFlags: 0

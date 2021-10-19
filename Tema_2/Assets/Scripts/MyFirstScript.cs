@@ -19,8 +19,10 @@ public class MyFirstScript : MonoBehaviour
     public float b = 2f;
      */
     public bool isRaining = false;
-
+    public bool isCold = false;
     public int playerAge = 35;
+    public int x = 5;
+    public int y = 2;
 
 
     // Start is called before the first frame update
@@ -30,7 +32,7 @@ public class MyFirstScript : MonoBehaviour
         Debug.Log("Resta: " + x + "+" + y + "=" + (x - y));
         Debug.Log(string.Format("Producto: {0} * {1} = {2}", x, y, x * y));
         Debug.Log(string.Format("Division: {0} / {1} = {2}", x, y, x / y));
-        */
+   
 
         if (isRaining)
         {
@@ -38,6 +40,31 @@ public class MyFirstScript : MonoBehaviour
         } else {
             Debug.Log($"No hace falta paraguas.");
         }
+        */
+
+        if (isRaining)
+        {
+            if (isCold)
+            {
+                Debug.Log("Lleva paraguas y sudadera.");
+            }
+            else
+            {
+                Debug.Log("Lleva paraguas.");
+            }
+        }
+        else
+        {
+            if (isCold)
+            {
+                Debug.Log($"Lleva sudadera.");
+            }
+            else
+            {
+                Debug.Log($"Disfruta del dia.");
+            }
+        }
+   
 
 
         if (playerAge >= 18) 
@@ -53,7 +80,15 @@ public class MyFirstScript : MonoBehaviour
               {
                     Debug.Log("Eres un bebe");
               }
-           
+
+
+        if (x == 2 || y <= 5)
+        {
+            Debug.Log("Es Verdadero");
+        }
+        else {
+            Debug.Log("Es Falso");
+        }
 
     }
 
