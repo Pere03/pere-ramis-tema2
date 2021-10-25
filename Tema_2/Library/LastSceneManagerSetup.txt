@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Coches.unity
+- path: Assets/Scenes/Otro.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

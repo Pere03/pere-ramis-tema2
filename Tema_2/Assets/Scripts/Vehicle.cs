@@ -76,6 +76,10 @@ public class Vehicle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isOn == true && Input.GetKeyDown(KeyCode.W))
+        {
+            transform.position += Vector3.back;
+        }
     }
 }
+    
