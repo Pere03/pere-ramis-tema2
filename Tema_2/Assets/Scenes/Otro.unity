@@ -249,6 +249,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myPos: {x: 0, y: 0, z: 0}
+  hello: 
+  Numero1: 5
+  Numero2: 2
 --- !u!65 &168631893
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -7,14 +7,22 @@ public class Other : MonoBehaviour
     public Vector3 myPos;
     public string hello;
 
+    public int Numero1;
+    public int Numero2;
+
     // Start is called before the first frame update
     void Start()
     {
 
+        Debug.Log(Multiplicacion(Numero1, Numero2));
+
+        /*
         HelloWorld();
 
         hello = GetHello();
         Debug.Log(hello);
+        */
+
         /*
         myPos = new Vector3(1,5,0);
         transform.position = myPos;
@@ -33,96 +41,39 @@ public class Other : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            transform.position += Vector3.right;
-        }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            transform.position += Vector3.left;
-        }
+        MovementToDirection(KeyCode.D, Vector3.right);
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            transform.position += Vector3.up;
-        }
+        MovementToDirection(KeyCode.A, Vector3.left);
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            transform.position += Vector3.down;
-        }
-        */
+        MovementToDirection(KeyCode.W, Vector3.forward);
 
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            transform.position += Vector3.right;
-        }
+        MovementToDirection(KeyCode.S, Vector3.back);
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            transform.position += Vector3.left;
-        }
-        //Teclas asignadas para izquierda y derecha
+        MovementToDirection(KeyCode.Q, Vector3.up);
 
+        MovementToDirection(KeyCode.E, Vector3.down);
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            transform.position += Vector3.up;
-        }
+        //Movimiento direccion con funcion
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            transform.position += Vector3.down;
-        }
-        //Teclas asignadas para arriba y abajo
+        MovementToRotate(KeyCode.RightArrow, new Vector3(0, 10, 0));
 
+        MovementToRotate(KeyCode.LeftArrow, new Vector3(0, -10, 0));
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            transform.position += Vector3.forward;
-        }
+        MovementToRotate(KeyCode.UpArrow, new Vector3(10, 0, 0));
 
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            transform.position += Vector3.back;
-        }
-        //Teclas asignadas para moverse adelante y atras
+        MovementToRotate(KeyCode.DownArrow, new Vector3(-10, 0, 0));
 
+        ////Movimiento rotacion con funcion
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            transform.rotation *= Quaternion.Euler(0, 10, 0);
-        }
+        MovementToScale(KeyCode.R, Vector3.right);
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            transform.rotation *= Quaternion.Euler(0, -10, 0);
-        }
+        MovementToScale(KeyCode.Y, Vector3.up);
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            transform.rotation *= Quaternion.Euler(10, 0, 0);
-        }
-
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            transform.rotation *= Quaternion.Euler(-10, 0, 0);
-        }
-        //Teclas asignadas para rotar
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            transform.localScale += Vector3.right;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            transform.localScale -= Vector3.right;
-        }
+        MovementToScale(KeyCode.Backspace, Vector3.forward);
+        //Movimiento escala con funcion
     }
-
+    /*
     public void HelloWorld()
     {
     Debug.Log("¡Hola Mundo!");
@@ -131,5 +82,38 @@ public class Other : MonoBehaviour
     public string GetHello()
     {
         return "¡Hola!";
+    }
+
+    */
+
+    public void MovementToDirection(KeyCode key, Vector3 direccion)
+    {
+        if (Input.GetKeyDown(key))
+        {
+            transform.position += direccion;
+        }
+    }
+
+    public void MovementToScale(KeyCode key, Vector3 escala)
+    {
+        if (Input.GetKeyDown(key))
+        {
+            transform.localScale += escala;
+        }
+    }
+
+    public void MovementToRotate(KeyCode key, Vector3 Rotacion)
+    {
+        if (Input.GetKeyDown(key))
+        {
+            transform.rotation *= Quaternion.Euler(Rotacion);
+        }
+    }
+
+    public int Multiplicacion(int numero1, int numero2)
+    {
+        int resultado = numero1 * numero2;
+        Debug.Log($"{Numero1} * {Numero2} = {resultado}");
+        return resultado;
     }
 }
